@@ -14,4 +14,4 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     '''
     waiting_seconds = await ao.gather(
         *tuple(map(lambda _: wait_random(max_delay), range(n))))
-    return waiting_seconds
+    return sorted(waiting_seconds)

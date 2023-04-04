@@ -10,4 +10,4 @@ async def async_comprehension() -> List(float):
     '''
     a method returning a list of random float numbers
     '''
-    return [i async for i in async_generator]
+    return [i async for i in async_generator()]

@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 '''
-a module for returning list of numbers generated asynchronously
+solution for task 2.
 '''
 from typing import List
-import importlib
-async_generator = importlib.import_module('0-async_generator').async_generator
+from importlib import import_module
 
 
-async def async_comprehension() -> List(float):
+async_generator = import_module('0-async_generator').async_generator
+
+
+async def async_comprehension() -> List[float]:
+    '''Creates a list of 10 numbers from a 10-number generator.
     '''
-    a method returning 10 list of random float numbers
-    '''
-    return [i async for i in async_generator()]
+    return [num async for num in async_generator()]

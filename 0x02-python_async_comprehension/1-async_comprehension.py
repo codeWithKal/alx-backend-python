@@ -3,10 +3,10 @@
 solution for task 2.
 '''
 from typing import List
-from importlib import import_module
+from importlib import import_module as use
 
 
-async_generator = import_module('0-async_generator').async_generator
+async_generator = use('0-async_generator').async_generator
 
 
 async def async_comprehension() -> List[float]:
